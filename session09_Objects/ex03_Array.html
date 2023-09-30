@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    /*
+        var s1 = new Array();  cách khai báo 1: constructor
+        var s2 = [];           cách khai báo 2: literal
+    */
+
+    // var ngay = ["Monday", "Tuesday", "Wednesday"];
+    // document.write("<h1>Dùng Method join()</h1>");
+    // document.write(ngay.join(", "));
+    // document.write("<br>");
+
+    with(document){
+    write("<h1>Dùng Method join()</h1>");
+    write(ngay.join(", "));
+    write("<br>");
+    
+    ngay.push("Thurday", "Friday", "Saturday", "Sunday");
+    
+    write("<h1>Dùng vòng lặp thường</h1>");
+    for(var i = 0; i < ngay.length; i++){
+      write(ngay[i] + "<br>");
+    }
+    write("<h1>Dùng vòng for each</h1>");
+    for(var i in ngay){
+      write(ngay[i] + ", ");
+    }
+    }
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

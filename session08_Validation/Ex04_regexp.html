@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        /*
+            ^   : bắt đầu kiểm tra
+            $   : kết thúc kiểm tra
+            []  : hằng
+            +   : loop from 1 to m
+            *   : loop from 0 to m
+            \w  : [a-zA-z0-9] - Alphanumeric
+            {m,n} : n=>
+            ()      : 
+            () ?    : option
+            \d  : 0->9
+        */
+
+        function kiemtra() {
+            //Fullname
+            var sName = document.getElementById("txtName").value;
+            // var reName = /^\w+$/;
+            // if (!reName.test(sName)) {
+            //     alert("Fullname cannot left blank!");
+            //     document.getElementById("txtName").focus();
+            //     return false;
+            // }
+            //Email
+            var sMail = document.getElementById("txtMail").value;
+            // var reMail = /^\w+[@]\w+[.]\w{3}([.]\w{2})?$/;
+            //     if (!reMail.test(sMail)) {
+            //     alert("Email is incorrect!");
+            //     document.getElementById("txtMail").focus();
+            //     return false;
+            // }
+            //Phone
+            var sPhone = document.getElementById("txtPhone").value;
+            var rePhone = /^\d{8,12}$/;
+            if (!rePhone.test(sPhone)) {
+                alert("Phone is incorrect!");
+                document.getElementById("txtPhone").focus();
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form action="https://vnexpress.net" onsubmit="return kiemtra();">
+        <table width="50%">
+            <tr>
+                <td align="right">Fullname:</td>
+                <td>
+                    <input id="txtName" autofocus>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Mail:</td>
+                <td>
+                    <input id="txtMail">
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Phone:</td>
+                <td>
+                    <input id="txtPhone">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Register">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

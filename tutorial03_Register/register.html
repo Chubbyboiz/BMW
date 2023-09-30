@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css.css">
+  <link rel="stylesheet" href="signin.css">
+  <script>
+    function kiemtra() {
+      //1. Đọc data
+      var sName = document.getElementById("txtFullname").value;
+      var sNamee = document.getElementById("txtLastname").value;
+      var sMail = document.getElementById("txtMail").value;
+      var sPhone = document.getElementById("txtPhone").value;
+
+      //2. Đối chiếu lỗi
+      if (sName.length == 0) {   //sName==""
+        //3. THổi còi
+        alert("Fullname cannot left blank!");
+        document.getElementById("txtFullname").focus();
+        //4. Phạt
+        return false;
+      }
+
+      if (sNamee.length == 0) {
+        alert("Lastname cannot left blank!");
+        document.getElementById("txtLastname").focus();
+        return false;
+      }
+
+      if (sMail.indexOf("@") < 0 || (sMail.indexOf(".") < 0)) {
+        alert("Email is incorrect");
+        document.getElementById("txtMail").focus();
+        return false;
+      }
+
+      if (isNaN(sPhone)) {
+        alert("Phone is incorrect");
+        document.getElementById("txtPhone").focus();
+        return false;
+      }
+      //Gender
+      var ID = document.getElementById("rdGender");
+      var sGender = (ID.checked) ? "Male" : "Female";
+      ////////////// == Message == ///////////////
+      //1. Chuẩn bị thông báo:
+      //1.1. Cách 1:
+      //var mes = "Welcome to my homepage";
+
+      //1.2. Cách 2:
+      var mes = [];
+      mes.push("This page says");
+      mes.push("Registed Information:");
+      mes.push("++++++++++++++++++++++++++++++++++++++++");
+      mes.push("Fullame: " + sName);
+      mes.push("Lastname: " + sNamee);
+      mes.push("Gender" + sGender);
+      mes.push("Email: " + sMail);
+      mes.push("Phone: " + sPhone);
+      //2. Thông báo
+      alert(mes.join("\n"));
+    }
+  </script>
+</head>
+
+<body>
+  <header>
+    <div id="logo">Logo</div>
+    <div class="myNav">
+      <a href="home.html">Home</a>
+      <a href="#">Share</a>
+      <a href="#">Register</a>
+      <a href="index.html">Login</a>
+      <a href="#">About us</a>
+    </div>
+  </header>
+  <main>
+    
+    <div class="container">
+      <div class="tongbang">
+        
+        <form class="bangg" name="dangky" action="https://vnexpress.net" onsubmit="return kiemtra();">
+          <table class="bang">
+            <caption><h1>Register Form</h1></caption>
+            <tr>
+              <td align="left">Full name:<span style="color: red;">*</span></td>
+              <td><input  class="input" id="txtFullname" type="text" placeholder="Enter Full name..." required autofocus></td>
+            </tr>
+            <tr>
+              <td align="left">Last name:<span style="color: red;">*</span></td>
+              <td><input class="input" id="txtLastname" type="text" placeholder="Enter Last name..." required autofocus></td>
+            </tr>
+            <tr>
+              <td align="left">Country:</td>
+              <td><select>
+                  <option>VietNam</option>
+                  <option>Korea</option>
+                  <option>Japan</option>
+                  <option>Thailand</option>
+                  <option>USA</option>
+                </select></td>
+            </tr>
+            <tr>
+              <td align="left">Gender:</td>
+              <td><input type="radio" name="gioitinh" name="rdGender" id="rdGender" checked> Male
+                <input type="radio" name="gioitinh" name="rdGender" id="rdGender"> Female
+              </td>
+            </tr>
+            <tr>
+              <td align="left">Email:<span style="color: red;">*</span></td>
+              <td><input class="input" id="txtMail" type="email" placeholder="Enter Email..." required autofocus></td>
+            </tr>
+            <tr>
+              <td align="left">Phone:<span style="color: red;">*</span></td>
+              <td><input class="input" id="txtPhone" type="phone" placeholder="Enter Telephone..." required autofocus></td>
+            </tr>
+            <tr>
+              <td><input type="submit" value="Register"></td>
+              <td><input type="reset" value="Reset"></td>
+            </tr>
+          </table>
+        </form>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="footer">
+      &copy; By Me. All Rights reversed
+    </div>
+  </footer>
+
+</body>
+
+</html>

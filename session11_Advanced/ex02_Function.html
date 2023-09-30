@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function ham1(){
+      alert("This is first style");                     //Cú pháp khai báo hàm ; Cách 1
+    }
+
+    const ham2 = () => {
+      alert("This is second style");                    //Cú pháp khai báo hàm ; Cách 2
+    }
+
+    const ham3 = (n) => {
+      alert("We have" + n + "friend(s)");               //Cú pháp khai báo hàm có giá trị
+    }
+  </script>
+</head>
+<body>
+  <input type="button" value="Style 1" onclick="ham1();">
+  <input type="button" value="Style 2" onclick="ham2();">
+  <input type="button" value="Style 2" onclick="ham3(10);">
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function changeLogo(){
+      // Đọc dữ liệu
+      var ID = document.getElementById("sePhone");
+      var i = ID.selectedIndex;
+      var phone = ID.options[i].value;
+      // Thay logo
+      document.getElementById("imgPhone").src="../image/logo-" + phone + ".png"
+    }
+  </script>
+</head>
+
+<body>
+  <form action="">
+    <table>
+      <tr>
+        <td>
+          <select id="sePhone" onclick="changeLogo();">
+            <option name="phone" id="iphone">Apple</option>
+            <option name="phone" id="samsung">Samsung</option>
+            <option name="phone" id="xiaomi">Xixaomi</option>
+            <option name="phone" id="oppo">Oppo</option>
+            <option name="phone" id="vivo">Vivo</option>
+          </select>
+        </td>
+        <td>
+          <img id="imgPhone" src="../image/logo-iphone.png" >
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+
+</html>

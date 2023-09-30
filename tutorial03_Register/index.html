@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="signin.css">
+  <script>
+    function checklogin(){
+    var logname = document.getElementById("login").value;
+    var logpwd = document.getElementById("password").value;
+    if((logname=="aptech")&&(logpwd=="123")){
+       alert("Welcome to aptech, login successfully")
+       return true;
+    }else
+        alert("Login name or Password invalid")
+        return false;
+
+}
+  </script>
+</head>
+
+<body>
+  <header>
+    <div id="logo">Logo</div>
+    <div class="myNav">
+      <a href="#">Home</a>
+      <a href="#">Share</a>
+      <a href="register.html">Register</a>
+      <a href="#">Login</a>
+      <a href="#">About us</a>
+    </div>
+  </header>
+  <main>
+    <div class="grid-container">
+      <div class="item1">
+        <div class="css-item1">
+          <img src="hinhminhhoa.jpg" alt="">
+        </div>
+      </div>
+      <div class="item2">
+        <h2 class="hhh">SignIn Form</h2>
+        <div class="form">
+          <form action="" onsubmit="checklogin()">
+            <table>
+              <tr>
+                <th><label>Login name:</label></th>
+                <td><input type="text" id="login"></td>
+              </tr>
+              <tr>
+                <th><label>Password:</label></th>
+                <td><input type="password" id="password" ></td>
+              </tr>
+              <tr>
+                <td colspan="2"><h5>Already have an account?<a href=""> SignUp</a></h5></td>
+              </tr>
+              <tr>
+                <td><button>SignIn</button></td>
+              </tr>
+          </table>       
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="footer">
+      &copy; By Me. All Rights reversed
+    </div>
+  </footer>
+
+</body>
+
+</html>

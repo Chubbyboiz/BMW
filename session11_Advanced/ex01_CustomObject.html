@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    // Cách 1
+    var Car1 = {};
+    // Cách 2
+    var Car2 = new Object();
+    // Cách 3
+    var Car3 = {
+        brand: 'Vinfast',
+        model: 'VF8',
+        price: 7000
+    }
+//////////////////////
+    Car1.brand = 'Toyota';
+    Car1.model = 'Camry 2.4Q';                //Cú pháp gán giá trị cho Car1 
+    Car1.price = 85000;
+
+    Car2.brand = "Mazda";
+    Car2.model = "CX5";
+    Car2.price = 75000;
+
+    document.write(Car1.brand + "<br>");
+    document.write(Car2.brand + "<br>");      //Cú pháp đọc giá trị ra màn hình
+    document.write(Car3.brand + "<br>");
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

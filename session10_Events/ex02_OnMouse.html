@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    // function doiSize(n){
+    //   var size = document.getElementById("img").width;
+    //   document.getElementById("img").width = size * n;
+    // }
+    function doiSize(){
+      var name = document.getElementById("btn").value;
+      var size = document.getElementById("img").width;
+      if(name == "zoom-in"){
+        document.getElementById("btn").value = "zoom-out";
+        document.getElementById("img").width = size * 2;
+      }else{
+        document.getElementById("btn").value = "zoom-in";
+        document.getElementById("img").width = size * 1/2;
+      }
+    }
+  </script>
+</head>
+<body>
+  <input type="submit" onmouseover="this.value='This is onmouseover'"
+                      onmouseout="this.value=''"
+                      onmousedown="this.value='Ui, đau'"
+                      onmouseup="this.value='Gửi gòiiii'">
+
+  <img id="img"  width="300" src="../image/ASUS3.jpg" onmouseover="doiSize(2)" onmouseout="doiSize(1/2)">
+  <hr align="left" width="50%">
+  <input id="btn" type="button" value="zoom-in" onclick="doiSize()" width="150">
+</body>
+</html>

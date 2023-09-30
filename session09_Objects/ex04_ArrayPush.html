@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    var danhsach = [];
+    function them(){
+      var ID = document.getElementById("seTraicay");
+      var i = ID.selectedIndex;
+      var traicay = ID.options[i].value;
+      if(traicay.length != 0){
+        danhsach.push(traicay);
+        document.getElementById("txtDisplay").value = danhsach.length;
+      }
+    }
+    function xuat(){
+      alert(danhsach.join("\n"));
+    }
+  </script>
+</head>
+<body>
+  <form action="" onsubmit="return xuat()">
+    Fruits: <input id="txtDisplay" value="0" readonly><br>
+    <select name="" id="seTraicay">
+      <option value="">Chọn trái cây...</option>
+      <option value="Xoài">Xoài</option>
+      <option value="Táo">Táo</option>
+      <option value="Lê">Lê</option>
+      <option value="Ổi">Ổi</option>
+      <option value="Măng cụt">Măng cụt</option>
+    </select>
+    <input type="button" value="+" onclick="them()"><br>
+    <input type="submit" value="Xuất danh sách">
+  </form>
+</body>
+</html>

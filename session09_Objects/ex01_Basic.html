@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    /*
+      1. Phân loại Object
+          1.1. HTML Object
+              Ex: input, div, h1...
+          1.2. Script Object
+              Ex: Date, String, Array...
+          1.3. Browser Object
+              Ex: Window, document, history, location,..
+      2. Cú pháp áp dụng cho Object
+          2.1. Thuộc tính: (được coi là biến)
+              [Tên đối tượng].[tên thuộc tính]
+              Ex: document.title
+          2.2. Phương thức: (được coi là hàm)
+              [Tên đối tượng].[phương thức]
+              Ex: document.write()
+    */
+    function getGiatri(s){
+      alert("Bạn vừa nhập:\n" + s);
+    }
+  </script>
+</head>
+<body>
+    <input onchange="getGiatri(this.value);">
+</body>
+</html>

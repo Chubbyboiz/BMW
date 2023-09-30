@@ -1,0 +1,73 @@
+/* .container{
+  margin: 20px 0px 0px 30%;
+  border: 2px solid #000;
+  border-radius: 6px;
+  width: 650px;
+  height: 500px;
+  text-align: center;
+}
+
+.bang{
+  width: 100%;
+}
+.bang tr{
+  margin: 6px 0px;
+}
+
+.input{
+  width: 300px;
+} */
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 100%;
+  margin: 20px auto; /* Để căn giữa bảng */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bang {
+  border-collapse: collapse;
+  width: 600px;
+  height: 500px;
+}
+
+.bang td {
+  padding: 8px;
+}
+
+.bang td:nth-child(1) {
+  text-align: left;
+  font-weight: bold;
+}
+
+.input {
+  width: 100%;
+  padding: 6px;
+}
+
+    /* Styling for the Submit and Reset buttons */
+    input[type="submit"],
+    input[type="reset"] {
+      padding: 12px 16px;
+      cursor: pointer;
+      border: 2px solid #000;
+      border-radius: 4px;
+      color: #000;
+      background-color: #fff;
+      text-transform: uppercase;
+    }
+
+    input[type="submit"]:hover,
+    input[type="reset"]:hover {
+      opacity: 0.6;
+    }
+
+.bangg{
+  border: 2px solid #000;
+  border-radius: 4px;
+}

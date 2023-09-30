@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function kiemtra(){
+            //1. Đọc data
+            var sName=document.getElementById("txtName").value;
+            var sMail=document.getElementById("txtMail").value;
+            var sPhone=document.getElementById("txtPhone").value;
+            
+            //2. Đối chiếu lỗi
+            if(sName.length == 0){   //sName==""
+            //3. THổi còi
+                alert("Fullname cannot left blank!");
+                document.getElementById("txtName").focus();
+            //4. Phạt
+                return false;
+            }
+
+            if(sMail.indexOf("@") < 0 || (sMail.indexOf(".") < 0)){
+                alert("Email is incorrect");
+                document.getElementById("txtMail").focus();
+                return false;
+            }
+
+            if(isNaN(sPhone))
+            {
+                alert("Phone is incorrect");
+                document.getElementById("txtPhone").focus();
+                return false;
+            }
+              //Gender
+            var ID = document.getElementById("rdGender");
+            var sGender = (ID.checked)? "Male" : "Female";
+                ////////////// == Message == ///////////////
+            //1. Chuẩn bị thông báo:
+              //1.1. Cách 1:
+              //var mes = "Welcome to my homepage";
+
+              //1.2. Cách 2:
+              var mes = [];
+              mes.push("Your Information:");
+              mes.push("------------------");
+              mes.push("Full name: " + sName);
+              mes.push("Email: " + sMail);
+              mes.push("Phone: " + sPhone);
+              mes.push("Gender" + sGender);
+            //2. Thông báo
+            alert(mes.join("\n"));
+        }
+        //////////////////// VỀ HỌC THÊM VALID VÀ INVALID
+        /*
+                      có nghĩa khi người nhập thông tin, nếu sai thì (invalid) sẽ đổi cái gì (chẳng hạn đổi màu ô nhập), nếu đúng ( valid ) thì đổi như nào. LƯU Ý: trong thẻ input phải có repuired
+         */
+    </script>
+    
+</head>
+<body>
+    <form name="dangky" action="https://vnexpress.net" onsubmit="return kiemtra();">
+        <table width="50%">
+            <tr>
+                <td align="right">Fullname:</td>
+                <td>
+                    <input id="txtName" autofocus>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Mail:</td>
+                <td>
+                    <input id="txtMail">
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Phone:</td>
+                <td>
+                    <input id="txtPhone">
+                </td>
+            </tr>
+            <tr>
+              <td align="right">Gender:</td>
+              <td>
+                  <input value="Male" type="radio" name="rdGender" id="rdGender" checked> Male
+                  <input value="Female" type="radio" name="rdGender" id="rdGender"> Female
+              </td>
+          </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Register">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

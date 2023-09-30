@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="data.js">
+
+  </script>
+</head>
+<body class="container">
+  <table class="table table-bordered table-hover">
+    <caption><h1>Danh sách xe hơi</h1></caption>
+    <tr>
+      <th>No</th>
+      <th>Brand</th>
+      <th>Model</th>
+      <th>Price</th>
+      <th>Image</th>
+      <th colspan="2">Function</th>
+    </tr>
+    <tr>
+      <script>
+        with(document){
+          for(var i = 0; i< xe.length; i++){
+            write("<tr>");
+              write("<td>" + (i+1) + "</td>");
+              write("<td>" + xe[i].brand + "</td>");
+              write("<td>" + xe[i].model + "</td>");
+              write("<td>" + xe[i].price + "</td>");
+              write("<td> <img src='" + xe[i].img + "' width = '150'> </td>");
+              write("<td><a href='#'>Edit</a></td>");
+              write("<td><a href='#' onclick='return confirm()'>Delete</a></td>");
+            write("</tr>");
+          }
+        }
+      </script>
+    </tr>
+  </table>
+  <td><img src=""></td>
+</body>
+</html>

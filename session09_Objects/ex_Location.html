@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function chuyentrang() {
+      // location.href = "https://www.google.com";
+      var url = document.getElementById("txtULR").value;
+      location.href = url;
+    }
+  </script>
+</head>
+
+<body>
+  <div>
+    Nhập địa chỉ web: <input id="txtURL">
+  </div>
+  <input type="button" value="Search" onclick="chuyentrang();">
+</body>
+
+</html>

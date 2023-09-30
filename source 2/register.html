@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./message.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <title>Register</title>
+</head>
+<body>
+          
+        <h1 id="logo">LOGO</h1>
+        <div class="mynav">
+            <a href="./index.html">Home</a>
+            <a href="">Untilitiies</a>
+            <a href="./reigster.html">Sign Up</a>
+            <a href="">Share</a>
+            <a href="">Knowleged</a>
+            <a href="">Contact Us</a>
+        </div>
+
+
+
+        <div class="signup">
+                <h2 class="text-center">Register Form</h2>
+                    <form  action="./index.html" onsubmit="return checkinfo();">
+        
+              <div class="form-group">
+                <label for="fullname">First Name:<span style="color:red">*</span></label>
+                <input type="text" class="form-control" id="fname" placeholder="Enter your full name" >
+        
+              </div>
+              <div class="form-group">
+                <label for="fullname">Last Name:<span style="color:red">*</span></label>
+                <input type="text" class="form-control" id="lname" placeholder="Enter your last name" >
+        
+              </div>
+              <div class="form-group">
+                <label for="country">Country:</label>
+                <select class="form-control" id="country" >
+                  <option value="Vietnam" selected>Vietnam</option>
+                  <option  value="Laos" >Laos</option>
+                  <option  value="Cambodia">Cambodia</option>
+                  <option  value="Thailand">Thailand</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                  <label for="">gender :</label>
+                  <input type="radio" name="gender" value="male" checked> Male
+                  <input type="radio" name="gender" value="female"> Female  
+              </div>
+
+              <div class="form-group">
+                    <label for="email">Email:<span style="color:red">*</span></label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email" >
+              </div>
+              <div class="form-group">
+                    <label for="phone">Phone:<span style="color:red">*</span></label>
+                    <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number"
+                  >
+              </div>
+        
+        
+        
+              <div class="form-group">
+                    <button type="submit" class="btn btn-primary " >Register</button>
+                    <button type="reset" class="btn btn-secondary ">Reset</button>
+              </div>
+        
+            </form>
+          </div>
+        
+</body>
+</html>
